@@ -4,17 +4,13 @@ using System.Text;
 
 namespace TRAINING.INFRASTRUCTURE
 {
-    public class UnderGraduateStudent : Student
+     public class PostGraduateStudent : Student
     {
-
         public void ComputeResult() {
 
-            System.Console.WriteLine("Compute Result Undergraduate Student");
+            System.Console.WriteLine("Compute Result Postgraduate Student");
         }
 
-
-        public void PayFee() { }
-
-
+        public  void PayFee() { }
     }
 }

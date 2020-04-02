@@ -16,6 +16,6 @@ namespace TRAINING.INFRASTRUCTURE
 
         public void Register() { }
 
-
+   
     }
 }
