@@ -144,7 +144,7 @@ namespace TRAINING.INFRASTRUCTURE
             int[] bars = new int[10];
             for (int i=1; i< MAX; i++) {
 
-                bars[data[i]] += data[i]; 
+                bars[data[i]] += 1; //data[i]; 
             
             }
 
