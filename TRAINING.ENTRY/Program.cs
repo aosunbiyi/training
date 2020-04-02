@@ -53,13 +53,17 @@ namespace TRAINING.ENTRY
             {
                 WriteLine(student.Name);
 
-                if(student is PostGraduateStudent)
+
+                // Pattern Matching
+                if(student is PostGraduateStudent st3)
                 {
                     PostGraduateStudent st = (PostGraduateStudent)student;
                     st.ComputeResult();
 
                     PostGraduateStudent st2 = student as PostGraduateStudent;
                     st2.ComputeResult();
+
+                    st3.ComputeResult();
 
 
 
