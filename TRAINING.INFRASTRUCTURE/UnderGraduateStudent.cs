@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using static System.Console;
 
 namespace TRAINING.INFRASTRUCTURE
 {
@@ -14,6 +15,8 @@ namespace TRAINING.INFRASTRUCTURE
 
 
         public void PayFee() { }
+
+     
 
 
     }
