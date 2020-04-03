@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using static System.Console;
 using System.Linq;
+using TRAINING.INFRASTRUCTURE.Extensions;
 
 namespace TRAINING.INFRASTRUCTURE
 {
