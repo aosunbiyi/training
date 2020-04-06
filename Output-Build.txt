@@ -1,0 +1,9 @@
+﻿1>------ Build started: Project: TRAINING.SYNTAX, Configuration: Debug Any CPU ------
+1>Strings.cs(23,17,23,30): warning CS0219: The variable 'transportaion' is assigned but its value is never used
+1>Strings.cs(26,20,26,25): warning CS0219: The variable 'story' is assigned but its value is never used
+1>Features\PropertyDemo.cs(25,21,25,29): warning CS0649: Field 'PropertyDemo._account' is never assigned to, and will always have its default value 0
+1>TRAINING.SYNTAX -> C:\Users\HP\source\repos\training\TRAINING.SYNTAX\bin\Debug\netcoreapp3.1\TRAINING.SYNTAX.dll
+1>Done building project "TRAINING.SYNTAX.csproj".
+2>------ Build started: Project: TRAINING.ENTRY, Configuration: Debug Any CPU ------
+2>TRAINING.ENTRY -> C:\Users\HP\source\repos\training\TRAINING.ENTRY\bin\Debug\netcoreapp3.1\TRAINING.ENTRY.dll
+========== Build: 2 succeeded, 0 failed, 2 up-to-date, 0 skipped ==========

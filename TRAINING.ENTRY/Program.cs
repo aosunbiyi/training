@@ -2,9 +2,9 @@
 using static System.Console;
 using TRAINING.INFRASTRUCTURE;
 using TRAINING.SYNTAX;
-using TRAINING.SYNTAX.Features;
 using static TRAINING.SYNTAX.ClassObject.Console;
 using System.Collections.Generic;
+using TRAINING.INFRASTRUCTURE.Interface;
 
 namespace TRAINING.ENTRY
 {
@@ -20,18 +20,23 @@ namespace TRAINING.ENTRY
         /// <param name="args"></param>
         static void Main(string[] args)
         {
+            List<IDiscipline> list = new List<IDiscipline>();
+            IDiscipline d1 = new Security("Good behavour");
+            IDiscipline d2 = new UnderGraduateStudent("Lovely Security");
+            list.Add(d1);
+            list.Add(d2);
 
-            PropertyDemo pd = new PropertyDemo();
-            pd.PageNumber = 45;
+            foreach (var item in list)
+            {
+                item.Report();
 
-            WriteLine(pd.PageNumber);
+                if(item is Student st)
+                {
+                    st.CheckResult();
+                }
+            }
 
-            //Indexer demo
 
-            IndexerDemo id = new IndexerDemo();
-            id[1] = 900;
-            WriteLine(id[1]);
-           
 
         }
     }
