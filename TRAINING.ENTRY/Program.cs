@@ -2,6 +2,7 @@
 using static System.Console;
 using TRAINING.INFRASTRUCTURE;
 using TRAINING.SYNTAX;
+using TRAINING.SYNTAX.Features;
 using static TRAINING.SYNTAX.ClassObject.Console;
 using System.Collections.Generic;
 
@@ -19,17 +20,17 @@ namespace TRAINING.ENTRY
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            ForeignPostGraduateStudent st = new ForeignPostGraduateStudent();
-            st.CheckResult();
-            
 
-            StudentSimo stSimo = new StudentSimo();
-            stSimo.SimoFor1();
+            PropertyDemo pd = new PropertyDemo();
+            pd.PageNumber = 45;
 
-            OutSideStudent os = new OutSideStudent();
-            WriteLine("From Out Side Student");
-            os.ShowReg();
-            
+            WriteLine(pd.PageNumber);
+
+            //Indexer demo
+
+            IndexerDemo id = new IndexerDemo();
+            id[1] = 900;
+            WriteLine(id[1]);
            
 
         }
