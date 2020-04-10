@@ -1,11 +1,16 @@
-﻿using System;
+﻿#define  DEBUG
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using static System.Console;
 using TRAINING.INFRASTRUCTURE.Interface;
 
+
 namespace TRAINING.INFRASTRUCTURE
 {
+
+
     public class UnderGraduateStudent : Student, IDiscipline
     {
 
@@ -26,5 +31,29 @@ namespace TRAINING.INFRASTRUCTURE
         {
             WriteLine(ReportDetails +" => UnderGraduate");
         }
+       // UnderGraduateStudent a = "fff";
+
+        public static implicit operator UnderGraduateStudent(string regnum)
+        {
+            UnderGraduateStudent st = new UnderGraduateStudent("");
+            st.RegNum = regnum;
+#if DEBUG
+
+
+
+            st.Name = "Default";
+            st.Phone = "000-000-00";
+#endif
+
+
+            return st;
+
+            // return new UnderGraduateStudent(regnum);
+        }
+
     }
 }
+
+
+
+

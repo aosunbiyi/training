@@ -21,8 +21,11 @@ namespace TRAINING.SYNTAX
 
         public Conversions()
         {
-            MyNum n1 = (MyNum)"Number one";
-            Console.WriteLine(n1.name);
+            MyNum n1 = (MyNum)99;
+            Console.WriteLine(n1.name +", value "+ n1.val);
+
+            MyNum n2 = new  MyNum(99);
+            Console.WriteLine((string)n2);
         }
 
          class MyNum
@@ -34,12 +37,26 @@ namespace TRAINING.SYNTAX
 
             public static implicit operator MyNum(int a)
             {
-                return new MyNum(a);
+                MyNum v = new MyNum(a);
+                v.name = "Not Asigned";
+                return v;
             }
 
             public static implicit operator MyNum(string a)
             {
-                return new MyNum(a);
+                MyNum v = new MyNum(a);
+                v.val = 0;
+                return v;
+            }
+
+            public static explicit operator int(MyNum n)
+            {
+                return n.val;
+            }
+
+            public static explicit operator string(MyNum n)
+            {
+                return n.name;
             }
 
         }

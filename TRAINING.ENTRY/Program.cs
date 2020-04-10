@@ -9,6 +9,8 @@ using AUDIO = TRAINING.INFRASTRUCTURE.Library.Audio.Converters;
 using  VIDEO= TRAINING.INFRASTRUCTURE.Library.Vidoes.Converters;
 using TRAINING.INFRASTRUCTURE.Enums;
 using TRAINING.INFRASTRUCTURE.OperatorOverloading;
+using TRAINING.INFRASTRUCTURE.Delegates;
+using TRAINING.INFRASTRUCTURE.Events;
 
 namespace TRAINING.ENTRY
 {
@@ -24,27 +26,23 @@ namespace TRAINING.ENTRY
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            //new Sample1().Run();
-            Coach c1 = new Coach();
-            c1.Length = 100;
-            c1.Breath = 400;
-            Coach c2 = new Coach();
-            c2.Breath = 200;
-            c2.Length = 23;
-            Coach c3 = Coach.Add(c1,c2);
-            WriteLine(c3.Area);
-            Coach c4 = new Coach();
-            c4.Breath = 700;
-            c4.Length = 400;
-            WriteLine(Coach.Add(c3,c4).Area);
+            Demo1 d = new Demo1();
+            //d.Run();
+            Demo2 d2 = new Demo2();
+            d2.Run();
 
-            Coach c5 = c3 + c4;
-            WriteLine(c5.Area);
+            EventPublisher p = new EventPublisher();
+
+            EventSubscriber1 s1 = new EventSubscriber1();
+            EventSubscriber2 s2 = new EventSubscriber2();
 
 
+            p.Added += s1.AddedEventHandler;
+            p.Added += s2.AddedEventHandler;
+
+            p.Add(50);
 
 
-            
 
 
 

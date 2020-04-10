@@ -19,6 +19,9 @@ namespace TRAINING.INFRASTRUCTURE
         public string Address { get; set; }
 
         public string RegNum { get; set; }
+        
+
+      
 
         public  void Register() {
             WriteLine("Register Method from Student Class");
